@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --color-dark: #12181F;
+  --color-white: #FFFFFF;
+  --color-primary: #d97757;
+  --color-secondary: #FAD066;
+  --color-primary-hover: #c4634a;
+  --color-gray-100: #F5F5F0;
+  --color-gray-200: #E8E8E3;
+  --color-gray-300: #D1D1CC;
+  --color-gray-400: #9A9A95;
+  --color-gray-500: #6B6B66;
+
+  /* Semantic Tokens */
+  --text-default: #12181F;
+  --text-subtle: #4A4A45;
+  --text-muted: #9A9A95;
+  --text-on-dark: #FFFFFF;
+  --text-on-primary: #FFFFFF;
+
+  --bg-base: #F5F5F0;
+  --bg-elevated: #FFFFFF;
+  --bg-dark: #12181F;
+  --bg-dark-elevated: #1C2430;
+
+  /* Shadows */
+  --shadow-brutal: 6px 6px 0px 0px #12181F;
+  --shadow-brutal-sm: 4px 4px 0px 0px #12181F;
+  --shadow-brutal-hover: 8px 8px 0px 0px #12181F;
+  --shadow-brutal-pressed: 2px 2px 0px 0px #12181F;
+  --shadow-brutal-white: 6px 6px 0px 0px #FFFFFF;
+
+  /* shadcn tokens */
+  --radius: 0.75rem;
+  --background: 0 0% 96%;
+  --foreground: 216 27% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 216 27% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 216 27% 10%;
+  --primary: 17 62% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 44 93% 70%;
+  --secondary-foreground: 216 27% 10%;
+  --muted: 40 10% 90%;
+  --muted-foreground: 40 3% 46%;
+  --accent: 40 10% 90%;
+  --accent-foreground: 216 27% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 216 27% 10%;
+  --input: 216 27% 10%;
+  --ring: 17 62% 60%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 17 62% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.3% 26.1%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 17 62% 60%;
+}
+
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+/* Scroll animation utilities */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.jersey-20-regular {
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatY {
+
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+.animate-float {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Testimonial carousel slide animations */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
