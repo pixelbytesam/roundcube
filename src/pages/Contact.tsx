@@ -3,6 +3,7 @@ import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import BrutalButton from '@/components/features/BrutalButton';
 import { SITE_CONFIG } from '@/constants/config';
 import { useToast } from '@/hooks/use-toast';
+import { FAQSection } from './Pricing';
 
 interface FormData {
   name: string;
@@ -225,6 +226,7 @@ export default function Contact() {
     <main>
       <HeroBanner />
       <ContactForm />
+      <FAQSection />
     </main>
   );
 }

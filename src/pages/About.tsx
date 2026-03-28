@@ -152,13 +152,15 @@ function TeamSection() {
           align="center"
         />
         {isVisible && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className='flex justify-center items-center w-full'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {TEAM_MEMBERS.map((member, i) => (
               <div key={member.id} className={`animate-fade-up stagger-${i + 1}`}>
                 <TeamCard member={member} />
               </div>
             ))}
           </div>
+        </div>
         )}
       </div>
     </section>

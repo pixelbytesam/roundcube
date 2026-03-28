@@ -137,7 +137,7 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
                             plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
                           }`}
                         >
-                          ${price.toLocaleString()}
+                          ₹{price.toLocaleString()}
                         </span>
                         <span
                           className={`text-sm ${
@@ -235,7 +235,7 @@ function FAQItem({ faq }: { faq: (typeof FAQS)[0] }) {
   );
 }
 
-function FAQSection() {
+export function FAQSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
@@ -368,7 +368,7 @@ function PricingCardsSection({ isYearly }: { isYearly: boolean }) {
                             plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
                           }`}
                         >
-                          ${price.toLocaleString()}
+                          ₹{price.toLocaleString()}
                         </span>
                         <span
                           className={`text-sm ${

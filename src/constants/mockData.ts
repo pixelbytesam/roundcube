@@ -652,32 +652,19 @@ export const TECH_STACK: TechCategory[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 'tm-1',
-    name: 'Alex Rivera',
-    role: 'Founder & CEO',
+    name: 'Ranjit Dabade',
+    role: 'CEO',
     avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop',
     bio: '15 years shipping digital products. Previously engineering lead at Stripe.',
   },
   {
     id: 'tm-2',
-    name: 'Priya Sharma',
-    role: 'Head of Engineering',
+    name: 'Vinayak Jadhav',
+    role: 'CTO',
     avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop',
     bio: 'Full-stack architect with a passion for performant, accessible code.',
   },
-  {
-    id: 'tm-3',
-    name: 'Jordan Blake',
-    role: 'Lead Designer',
-    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop',
-    bio: 'Design systems thinker. Believes great UX is invisible.',
-  },
-  {
-    id: 'tm-4',
-    name: 'Mia Tanaka',
-    role: 'Cloud Architect',
-    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop',
-    bio: 'AWS-certified. Built infra handling 10M+ requests daily.',
-  },
+
 ];
 
 export const STATS: Stat[] = [
