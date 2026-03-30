@@ -48,9 +48,8 @@ function StorySection() {
     <section className="py-20 md:py-28 bg-brand-cream" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-start ${
-            isVisible ? 'animate-fade-up' : 'opacity-0'
-          }`}
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-start ${isVisible ? 'animate-fade-up' : 'opacity-0'
+            }`}
         >
           <div className="lg:col-span-5">
             <SectionHeading
@@ -110,9 +109,20 @@ function MissionVision() {
             {items.map((item, i) => (
               <div
                 key={item.title}
-                className={`bg-brand-cream border-2 border-brand-dark rounded-2xl p-8 shadow-brutal animate-fade-up stagger-${i + 1}`}
+                className={`
+    bg-white border-2 border-brand-dark rounded-2xl p-8 shadow-brutal
+    animate-fade-up stagger-${i + 1}
+    group overflow-hidden
+    transform-gpu transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+    hover:-translate-y-2 hover:scale-[1.04] hover:shadow-brutal-hover
+  `}
               >
-                <div className="size-12 flex items-center justify-center bg-brand-primary text-white border-2 border-brand-dark rounded-xl shadow-brutal-sm mb-5">
+                <div className="
+  size-12 flex items-center justify-center
+  bg-brand-primary text-white border-2 border-brand-dark rounded-xl shadow-brutal-sm mb-5
+  transition-transform duration-300 ease-out
+  group-hover:rotate-6 group-hover:scale-110
+">
                   <item.icon className="size-5" />
                 </div>
                 <h3 className="text-xl font-bold text-brand-dark mb-3">{item.title}</h3>
@@ -142,6 +152,16 @@ function StatsBar() {
 
 function TeamSection() {
   const { ref, isVisible } = useScrollAnimation();
+
+  const columns =
+    TEAM_MEMBERS.length === 1
+      ? "lg:grid-cols-1"
+      : TEAM_MEMBERS.length === 2
+        ? "lg:grid-cols-2"
+        : TEAM_MEMBERS.length === 3
+          ? "lg:grid-cols-3"
+          : "lg:grid-cols-4";
+
   return (
     <section className="py-20 md:py-28 bg-brand-cream" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,22 +171,27 @@ function TeamSection() {
           description="A lean squad of senior-level talent. No juniors learning on your dime."
           align="center"
         />
+
         {isVisible && (
-        <div className='flex justify-center items-center w-full'>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TEAM_MEMBERS.map((member, i) => (
-              <div key={member.id} className={`animate-fade-up stagger-${i + 1}`}>
-                <TeamCard member={member} />
-              </div>
-            ))}
+          <div className="flex justify-center w-full">
+            <div
+              className={`grid grid-cols-1 sm:grid-cols-2 ${columns} gap-6 justify-items-center`}
+            >
+              {TEAM_MEMBERS.map((member, i) => (
+                <div
+                  key={member.id}
+                  className={`animate-fade-up stagger-${i + 1} w-full max-w-xs`}
+                >
+                  <TeamCard member={member} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         )}
       </div>
     </section>
   );
 }
-
 function CtaSection() {
   return (
     <section className="py-20 bg-white">

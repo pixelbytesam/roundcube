@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
-  name: 'RoundCude',
+  name: 'FlatOrbit',
   tagline: 'We Build Digital Products That Matter',
   description: 'Premium IT services agency specializing in web, mobile, and custom software development with bold design and cutting-edge technology.',
-  email: 'roundcude@gamil.com',
+  email: 'flatorbit@gmail.com',
   phone: '+918965328689',
   address: '42 Pune, Maharashtra, India',
   social: {

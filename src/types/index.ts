@@ -38,6 +38,7 @@ export interface Project {
   techStack: string[];
   imageUrl: string;
   year: string;
+  link?: string;
   client: string;
 }
 

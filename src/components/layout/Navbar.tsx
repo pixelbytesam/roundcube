@@ -42,7 +42,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[72px]">
         <Link to="/" className="flex items-center gap-2.5">
           <div className="size-9 bg-brand-primary border-2 border-brand-dark rounded-lg shadow-brutal-sm flex items-center justify-center">
-            <span className="text-white font-bold text-xl"> <img src="/logo12.png" alt="RoundCube Logo" className='w-44' /> </span>
+            <span className="text-white font-bold text-xl"> N </span>
           </div>
           <span
             className={`text-xl font-bold transition-colors ${
