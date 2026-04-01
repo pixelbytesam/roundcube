@@ -60,10 +60,10 @@ function StorySection() {
           <div className="lg:col-span-7">
             <div className="space-y-5 text-brand-gray-500 text-lg leading-relaxed text-pretty">
               <p>
-                RoundCube started in 2025 when our founders — tired of bloated agencies delivering cookie-cutter software — decided there had to be a better way.
+                flatorbit started in 2025 when our founders — tired of bloated agencies delivering cookie-cutter software — decided there had to be a better way.
               </p>
               <p>
-                We built RoundCube on a conviction: that small, elite teams shipping with urgency and craft will always outperform large, slow bureaucracies. Every line of code we write reflects that philosophy.
+                We built flatorbit on a conviction: that small, elite teams shipping with urgency and craft will always outperform large, slow bureaucracies. Every line of code we write reflects that philosophy.
               </p>
               <p>
                 Six years later, we've shipped 120+ products across fintech, health-tech, e-commerce, and SaaS — with a client satisfaction rate that speaks for itself.

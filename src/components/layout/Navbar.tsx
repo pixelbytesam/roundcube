@@ -41,13 +41,14 @@ export default function Navbar() {
 >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[72px]">
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="size-9 bg-brand-primary border-2 border-brand-dark rounded-lg shadow-brutal-sm flex items-center justify-center">
-            <span className="text-white font-bold text-xl"> N </span>
-          </div>
+          {/* <div className="size-9 bg-brand-primary border-2 border-brand-dark rounded-lg shadow-brutal-sm flex items-center justify-center">
+            <span className="text-white font-bold text-xl"> FO </span>
+          </div> */}
           <span
-            className={`text-xl font-bold transition-colors ${
+            className={`text-3xl font-bold transition-colors ${
               scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
             }`}
+     
           >
             {SITE_CONFIG.name}
           </span>

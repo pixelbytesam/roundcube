@@ -1,14 +1,22 @@
-User-agent: Googlebot
-Allow: /
+# robots.txt for FlatOrbit (https://www.flatorbit.com)
+# Generated for maximum SEO crawlability
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# ───────────────────────────────────────
+# Allow ALL crawlers (Google, Bing, etc.)
+# ───────────────────────────────────────
 User-agent: *
 Allow: /
+
+# ───────────────────────────────────────
+# Block access to private/system paths
+# ───────────────────────────────────────
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.env$
+Disallow: /src/
+
+# ───────────────────────────────────────
+# Sitemap location
+# ───────────────────────────────────────
+Sitemap: https://www.flatorbit.com/sitemap.xml
