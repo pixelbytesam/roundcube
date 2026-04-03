@@ -34,8 +34,7 @@ function LoadingFallback() {
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-        <ScrollProgressBar />
+
         <Navbar />
         <div className="flex-1">
           <Suspense fallback={<LoadingFallback />}>
@@ -55,7 +54,7 @@ export default function App() {
               </Routes>
             </PageTransition>
           </Suspense>
-        </div>
+  
         <Footer />
       </div>
       <Toaster />

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { NAV_LINKS, SITE_CONFIG } from '@/constants/config';
+import ScrollProgressBar from '../features/ScrollProgressBar';
+import { px } from 'framer-motion';
 
 export default function Navbar() {
   const location = useLocation();
@@ -31,24 +33,31 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-<header
-  className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-200 ${
-    scrolled || mobileOpen
-      ? 'bg-white border-b-2 border-brand-dark shadow-brutal-sm'
-      : 'bg-white border-b border-brand-dark/10 lg:bg-transparent lg:border-b-0' 
-      /* ^ Notice we keep bg-white as default for mobile, only lg: goes transparent */
-  }`}
->
+    <header
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-200 ${scrolled || mobileOpen
+        ? 'bg-white border-b-2 border-brand-dark shadow-brutal-sm'
+        : 'bg-white border-b border-brand-dark/10 lg:bg-transparent lg:border-b-0'
+        /* ^ Notice we keep bg-white as default for mobile, only lg: goes transparent */
+        }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[72px]">
-        <Link to="/" className="flex items-center gap-2.5">
-          {/* <div className="size-9 bg-brand-primary border-2 border-brand-dark rounded-lg shadow-brutal-sm flex items-center justify-center">
-            <span className="text-white font-bold text-xl"> FO </span>
-          </div> */}
+        <Link to="/" className="flex items-center justify-center gap-2.5">
+          {/* <div className="size-9 bg-brand-primary border-2 border-brand-dark rounded-lg shadow-brutal-sm flex items-center justify-center"> */}
+          <img
+            src={scrolled ? "/logo-dark.png" : "/logo-light.png"}
+            className="w-10 lg:block hidden"
+          />
+
+          <img
+            src="/logo-dark.png"
+            className="w-10 lg:hidden block"
+          />
+          {/* </div> */}
           <span
-            className={`text-3xl font-bold transition-colors ${
-              scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
-            }`}
-     
+            className={`text-2xl tracking-wide transition-colors mb-2 font-blanka ${scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
+              }`}
+            style={{ letterSpacing: "2px" }}
+
           >
             {SITE_CONFIG.name}
           </span>
@@ -64,13 +73,12 @@ export default function Navbar() {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-150 ${
-                    isActive
-                      ? 'text-brand-primary bg-brand-primary/10'
-                      : scrolled
-                        ? 'text-brand-dark hover:text-brand-primary hover:bg-brand-cream'
-                        : 'text-white/80 hover:text-white hover:bg-white/10'
-                  }`}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-150 ${isActive
+                    ? 'text-brand-primary bg-brand-primary/10'
+                    : scrolled
+                      ? 'text-brand-dark hover:text-brand-primary hover:bg-brand-cream'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                    }`}
                 >
                   {link.label}
                   {isActive && (
@@ -84,7 +92,7 @@ export default function Navbar() {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold bg-brand-primary text-white border-2 border-brand-dark rounded-xl shadow-brutal-sm transition-all duration-150 hover:bg-brand-primary-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-brutal-pressed"
+          className={` hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold bg-brand-primary text-white border-2 border-brand-dark rounded-xl ${scrolled ? ' shadow-brutal-sm ' : 'shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]'} transition-all duration-150 hover:bg-brand-primary-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-brutal-pressed`}
         >
           Let's Talk
         </Link>
@@ -92,24 +100,24 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden size-10 flex items-center justify-center border-2 rounded-lg transition-colors ${
-            scrolled || mobileOpen
-              ? 'bg-white border-brand-dark text-brand-dark'
-              : 'bg-white border-brand-dark text-brand-dark'
-          }`}
+          className={`lg:hidden size-10 flex items-center justify-center border-2 rounded-lg transition-colors ${scrolled || mobileOpen
+            ? 'bg-white border-brand-dark text-brand-dark'
+            : 'bg-white border-brand-dark text-brand-dark'
+            }`}
           aria-label="Toggle navigation"
         >
           {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
       </nav>
 
+      <ScrollProgressBar />
+
       {/* Mobile menu - full screen overlay */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white transition-all duration-300 ${
-          mobileOpen
-            ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-0 -translate-y-4 pointer-events-none'
-        }`}
+        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white transition-all duration-300 ${mobileOpen
+          ? 'opacity-100 translate-y-0 pointer-events-auto'
+          : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
       >
         <div className="h-full overflow-y-auto px-4 py-6">
           <ul className="space-y-1">
@@ -121,11 +129,10 @@ export default function Navbar() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className={`flex items-center justify-between px-4 py-3.5 rounded-xl font-medium transition-colors ${
-                      isActive
-                        ? 'bg-brand-primary/10 text-brand-primary'
-                        : 'text-brand-dark hover:bg-brand-cream'
-                    }`}
+                    className={`flex items-center justify-between px-4 py-3.5 rounded-xl font-medium transition-colors ${isActive
+                      ? 'bg-brand-primary/10 text-brand-primary'
+                      : 'text-brand-dark hover:bg-brand-cream'
+                      }`}
                   >
                     <span>{link.label}</span>
                     <ChevronRight className="size-4 text-brand-gray-400" />
@@ -142,7 +149,7 @@ export default function Navbar() {
               Let's Talk
             </Link>
           </div>
-    
+
         </div>
       </div>
     </header>

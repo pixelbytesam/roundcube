@@ -24,7 +24,7 @@ import {
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from 'react';
 import HeroHeading from '@/components/HeroHeadingLoop';
-import CubeLogo from '@/components/logo';
+
 
 /* ─── 1. HERO ─── */
 function HeroSection() {
@@ -98,10 +98,10 @@ function HeroSection() {
             <div className="mt-12 flex items-center gap-8 flex-wrap">
               {STATS.slice(0, 3).map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-2xl font-bold text-white tabular-nums">
+                  <div className="text-4xl font-bold text-white tabular-nums">
                     {stat.value}{stat.suffix}
                   </div>
-                  <div className="text-xs text-brand-gray-400 mt-0.5">{stat.label}</div>
+                  <div className="text-sm text-brand-gray-400 mt-0.5">{stat.label}</div>
                 </div>
               ))}
             </div>

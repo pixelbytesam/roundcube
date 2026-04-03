@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+@font-face {
+  font-family: 'Blanka';
+  src: url('./assets/fonts/Blanka.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -104,6 +110,8 @@ body {
   animation: fadeUp 0.6s ease-out forwards;
   opacity: 0;
 }
+
+
 
 .jersey-20-regular {
   font-family: "Jersey 20", sans-serif;

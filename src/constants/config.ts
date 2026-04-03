@@ -1,3 +1,5 @@
+import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
+
 export const SITE_CONFIG = {
   name: 'FlatOrbit',
   tagline: 'We Build Digital Products That Matter',
@@ -6,10 +8,24 @@ export const SITE_CONFIG = {
   phone: '+918965328689',
   address: '42 Pune, Maharashtra, India',
   social: {
-    twitter: 'https://twitter.com/nexabuild',
-    linkedin: 'https://linkedin.com/company/nexabuild',
-    github: 'https://github.com/nexabuild',
-    dribbble: 'https://dribbble.com/nexabuild',
+    github: {
+      url: "https://github.com/...",
+      icon: Github,
+    },
+    instagram: {
+      url: "https://instagram.com/...",
+      icon: Twitter,
+    },
+    linkedin: {
+      url: "https://linkedin.com/...",
+      icon: Linkedin,
+    },
+    youtube: {
+      url: "https://youtube.com/...",
+      icon: Youtube,
+    },
+
+
   },
 };
 

@@ -27,7 +27,7 @@ export interface CaseStudy {
   techUsed: string[];
   outcome: string;
   imageUrl: string;
-  category: 'web' | 'mobile' | 'saas';
+  category: 'web' | 'mobile' | 'saas' | 'security' | 'cloud' | 'custom-software' | 'landing-pages';
 }
 
 export interface Project {

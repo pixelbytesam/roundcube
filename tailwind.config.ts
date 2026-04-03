@@ -20,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Space Grotesk', 'sans-serif'],
+				blanka: ['Blanka', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

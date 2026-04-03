@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SITE_CONFIG, NAV_LINKS } from '@/constants/config';
 import { SERVICES } from '@/constants/mockData';
+import { Icon } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,27 +11,31 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
-              <div className="size-9 bg-brand-primary border-2 border-white rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RC</span>
-              </div>
-              <span className="text-xl font-bold">{SITE_CONFIG.name}</span>
+              {/* <div className="size-9 bg-brand-primary border-2 border-white rounded-lg flex items-center justify-center"> */}
+              <img src="/logo-light.png" alt="" className='w-10' />
+              {/* </div> */}
+              <span className="text-xl font-blanka" style={{ letterSpacing: "2px" }}>{SITE_CONFIG.name}</span>
             </div>
-            <p className="text-brand-gray-400 text-[15px] leading-relaxed max-w-sm">
+            <p className="text-brand-gray-400 text-[15px] leading-relaxed max-w-sm" >
               {SITE_CONFIG.description}
             </p>
             <div className="flex gap-3 mt-6">
-              {Object.entries(SITE_CONFIG.social).map(([name, url]) => (
-                <a
-                  key={name}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="size-10 flex items-center justify-center bg-white/10 border border-white/20 rounded-lg text-sm font-semibold capitalize hover:bg-brand-primary hover:border-brand-primary transition-colors"
-                  aria-label={`Visit our ${name}`}
-                >
-                  {name.charAt(0).toUpperCase()}
-                </a>
-              ))}
+              {Object.entries(SITE_CONFIG.social).map(([name, item]) => {
+                const IconComponent = item.icon; // ✅ declare here
+
+                return (
+                  <a
+                    key={name}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="size-10 flex items-center justify-center bg-white/10 border border-white/20 rounded-lg text-sm font-semibold capitalize hover:bg-brand-primary hover:border-brand-primary transition-colors"
+                    aria-label={`Visit our ${name}`}
+                  >
+                    <IconComponent className="w-4 h-4" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
