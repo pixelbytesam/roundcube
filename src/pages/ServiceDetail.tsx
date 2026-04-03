@@ -65,12 +65,13 @@ const processIconMap: Record<string, React.ElementType> = {
 };
 
 const illustrationMap: Record<string, string> = {
-  'web-dev': serviceWebDev,
-  'mobile-dev': serviceMobileDev,
-  'custom-software': serviceCustomSoftware,
+  'web-development': serviceWebDev,
+  'mobile-app-development': serviceMobileDev,
+  'landing-pages': serviceWebDev,
+  'custom-software-development': serviceCustomSoftware,
   'ui-ux-design': serviceUiuxDesign,
   'cloud-solutions': serviceCloud,
-  'backend-dev': serviceBackend,
+  'backend-development': serviceBackend,
   'security': serviceSecurity,
   'domain-hosting': serviceHosting,
   'testing': serviceTesting,
