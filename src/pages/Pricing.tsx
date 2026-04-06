@@ -38,9 +38,8 @@ function PricingToggle({
   return (
     <div className="flex items-center justify-center gap-4 mb-12">
       <span
-        className={`text-sm font-semibold transition-colors ${
-          !isYearly ? 'text-brand-dark' : 'text-brand-gray-400'
-        }`}
+        className={`text-sm font-semibold transition-colors ${!isYearly ? 'text-brand-dark' : 'text-brand-gray-400'
+          }`}
       >
         Monthly
       </span>
@@ -50,15 +49,13 @@ function PricingToggle({
         aria-label="Toggle yearly pricing"
       >
         <div
-          className={`size-6 bg-brand-primary rounded-full transition-transform duration-300 ${
-            isYearly ? 'translate-x-6' : 'translate-x-0'
-          }`}
+          className={`size-6 bg-brand-primary rounded-full transition-transform duration-300 ${isYearly ? 'translate-x-6' : 'translate-x-0'
+            }`}
         />
       </button>
       <span
-        className={`text-sm font-semibold transition-colors ${
-          isYearly ? 'text-brand-dark' : 'text-brand-gray-400'
-        }`}
+        className={`text-sm font-semibold transition-colors ${isYearly ? 'text-brand-dark' : 'text-brand-gray-400'
+          }`}
       >
         Yearly
       </span>
@@ -77,7 +74,7 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
   return (
     <section className="py-20 md:py-28 bg-brand-cream" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <PricingToggle isYearly={isYearly} onToggle={() => {}} />
+        <PricingToggle isYearly={isYearly} onToggle={() => { }} />
         {isVisible && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
             {PRICING_PLANS.map((plan, i) => {
@@ -87,11 +84,10 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
               return (
                 <div
                   key={plan.id}
-                  className={`relative rounded-2xl border-2 border-brand-dark p-8 transition-all duration-200 hover:-translate-y-1 animate-fade-up stagger-${i + 1} ${
-                    plan.highlighted
-                      ? 'bg-brand-dark text-white shadow-[8px_8px_0px_0px_#d97757] scale-[1.02]'
-                      : 'bg-white shadow-brutal'
-                  }`}
+                  className={`relative rounded-2xl border-2 border-brand-dark p-8 transition-all duration-200 hover:-translate-y-1 animate-fade-up stagger-${i + 1} ${plan.highlighted
+                    ? 'bg-brand-dark text-white shadow-[8px_8px_0px_0px_#d97757] scale-[1.02]'
+                    : 'bg-white shadow-brutal'
+                    }`}
                 >
                   {plan.badge && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -104,16 +100,14 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
 
                   <div className="mb-6">
                     <h3
-                      className={`text-xl font-bold mb-2 ${
-                        plan.highlighted ? 'text-white' : 'text-brand-dark'
-                      }`}
+                      className={`text-xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-brand-dark'
+                        }`}
                     >
                       {plan.name}
                     </h3>
                     <p
-                      className={`text-sm leading-relaxed ${
-                        plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
-                      }`}
+                      className={`text-sm leading-relaxed ${plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
+                        }`}
                     >
                       {plan.description}
                     </p>
@@ -123,9 +117,8 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
                     {isCustom ? (
                       <div className="flex items-baseline gap-1">
                         <span
-                          className={`text-4xl font-bold ${
-                            plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
-                          }`}
+                          className={`text-4xl font-bold ${plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
+                            }`}
                         >
                           Custom
                         </span>
@@ -133,16 +126,14 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
                     ) : (
                       <div className="flex items-baseline gap-1">
                         <span
-                          className={`text-4xl font-bold tabular-nums ${
-                            plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
-                          }`}
+                          className={`text-4xl font-bold tabular-nums ${plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
+                            }`}
                         >
                           ₹{price.toLocaleString()}
                         </span>
                         <span
-                          className={`text-sm ${
-                            plan.highlighted ? 'text-brand-gray-400' : 'text-brand-gray-400'
-                          }`}
+                          className={`text-sm ${plan.highlighted ? 'text-brand-gray-400' : 'text-brand-gray-400'
+                            }`}
                         >
                           /month
                         </span>
@@ -154,22 +145,19 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
                         <div
-                          className={`size-5 flex items-center justify-center rounded-md shrink-0 mt-0.5 ${
-                            plan.highlighted
-                              ? 'bg-brand-primary/20'
-                              : 'bg-brand-primary/10'
-                          }`}
+                          className={`size-5 flex items-center justify-center rounded-md shrink-0 mt-0.5 ${plan.highlighted
+                            ? 'bg-brand-primary/20'
+                            : 'bg-brand-primary/10'
+                            }`}
                         >
                           <Check
-                            className={`size-3 ${
-                              plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
-                            }`}
+                            className={`size-3 ${plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
+                              }`}
                           />
                         </div>
                         <span
-                          className={`text-sm ${
-                            plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
-                          }`}
+                          className={`text-sm ${plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
+                            }`}
                         >
                           {feature}
                         </span>
@@ -200,6 +188,27 @@ function PricingCards({ isYearly }: { isYearly: boolean }) {
           </div>
         )}
       </div>
+
+      <div className="mt-16 flex flex-col items-center gap-4">
+        <div className="relative max-w-xl w-full mx-auto rounded-2xl border-2 border-brand-dark bg-brand-secondary/20 px-8 py-5 shadow-brutal flex items-start gap-4">
+          <div className="shrink-0 mt-0.5 size-8 rounded-md border-2 border-brand-dark bg-brand-secondary flex items-center justify-center">
+            <Sparkles className="size-4 text-brand-dark" />
+          </div>
+          <div>
+            <p className="text-sm font-bold text-brand-dark mb-0.5">Not sure which tier fits?</p>
+            <p className="text-sm text-brand-gray-500 leading-relaxed">
+              Let's talk — most projects start with a{' '}
+              <span className="font-semibold text-brand-dark">free 30-minute scoping call</span>.
+              We'll scope your project and recommend the right fit before any commitment.
+            </p>
+          </div>
+        </div>
+
+        <BrutalButton to="/contact" variant="outline" className="mt-2">
+          Book a free scoping call <ArrowRight className="size-4" />
+        </BrutalButton>
+      </div>
+
     </section>
   );
 }
@@ -217,15 +226,13 @@ function FAQItem({ faq }: { faq: (typeof FAQS)[0] }) {
           {faq.question}
         </h3>
         <ChevronDown
-          className={`size-5 text-brand-gray-400 shrink-0 transition-transform duration-300 ${
-            open ? 'rotate-180' : ''
-          }`}
+          className={`size-5 text-brand-gray-400 shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''
+            }`}
         />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <p className="px-6 pb-6 text-brand-gray-500 text-[15px] leading-relaxed -mt-1">
           {faq.answer}
@@ -316,11 +323,10 @@ function PricingCardsSection({ isYearly }: { isYearly: boolean }) {
               return (
                 <div
                   key={plan.id}
-                  className={`relative rounded-2xl border-2 border-brand-dark p-8 transition-all duration-200 hover:-translate-y-1 animate-fade-up stagger-${i + 1} ${
-                    plan.highlighted
-                      ? 'bg-brand-dark text-white shadow-[8px_8px_0px_0px_#d97757] md:scale-[1.03]'
-                      : 'bg-white shadow-brutal'
-                  }`}
+                  className={`relative rounded-2xl border-2 border-brand-dark p-8 transition-all duration-200 hover:-translate-y-1 animate-fade-up stagger-${i + 1} ${plan.highlighted
+                    ? 'bg-brand-dark text-white shadow-[8px_8px_0px_0px_#d97757] md:scale-[1.03]'
+                    : 'bg-white shadow-brutal'
+                    }`}
                 >
                   {plan.badge && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -333,47 +339,41 @@ function PricingCardsSection({ isYearly }: { isYearly: boolean }) {
 
                   <div className="mb-6">
                     <h3
-                      className={`text-xl font-bold mb-2 ${
-                        plan.highlighted ? 'text-white' : 'text-brand-dark'
-                      }`}
+                      className={`text-xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-brand-dark'
+                        }`}
                     >
                       {plan.name}
                     </h3>
                     <p
-                      className={`text-sm leading-relaxed ${
-                        plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
-                      }`}
+                      className={`text-sm leading-relaxed ${plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
+                        }`}
                     >
                       {plan.description}
                     </p>
                   </div>
 
                   <div
-                    className={`mb-6 pb-6 border-b ${
-                      plan.highlighted ? 'border-white/15' : 'border-brand-gray-200'
-                    }`}
+                    className={`mb-6 pb-6 border-b ${plan.highlighted ? 'border-white/15' : 'border-brand-gray-200'
+                      }`}
                   >
                     {isCustom ? (
                       <span
-                        className={`text-4xl font-bold ${
-                          plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
-                        }`}
+                        className={`text-4xl font-bold ${plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
+                          }`}
                       >
                         Custom
                       </span>
                     ) : (
                       <div className="flex items-baseline gap-1">
                         <span
-                          className={`text-4xl font-bold tabular-nums ${
-                            plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
-                          }`}
+                          className={`text-4xl font-bold tabular-nums ${plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
+                            }`}
                         >
                           ₹{price.toLocaleString()}
                         </span>
                         <span
-                          className={`text-sm ${
-                            plan.highlighted ? 'text-brand-gray-400' : 'text-brand-gray-400'
-                          }`}
+                          className={`text-sm ${plan.highlighted ? 'text-brand-gray-400' : 'text-brand-gray-400'
+                            }`}
                         >
                           /month
                         </span>
@@ -385,22 +385,19 @@ function PricingCardsSection({ isYearly }: { isYearly: boolean }) {
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
                         <div
-                          className={`size-5 flex items-center justify-center rounded-md shrink-0 mt-0.5 ${
-                            plan.highlighted
-                              ? 'bg-brand-primary/30'
-                              : 'bg-brand-primary/10'
-                          }`}
+                          className={`size-5 flex items-center justify-center rounded-md shrink-0 mt-0.5 ${plan.highlighted
+                            ? 'bg-brand-primary/30'
+                            : 'bg-brand-primary/10'
+                            }`}
                         >
                           <Check
-                            className={`size-3 ${
-                              plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
-                            }`}
+                            className={`size-3 ${plan.highlighted ? 'text-brand-secondary' : 'text-brand-primary'
+                              }`}
                           />
                         </div>
                         <span
-                          className={`text-sm ${
-                            plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
-                          }`}
+                          className={`text-sm ${plan.highlighted ? 'text-brand-gray-300' : 'text-brand-gray-500'
+                            }`}
                         >
                           {feature}
                         </span>
@@ -420,6 +417,26 @@ function PricingCardsSection({ isYearly }: { isYearly: boolean }) {
             })}
           </div>
         )}
+      </div>
+
+      <div className="mt-16 flex flex-col items-center gap-4">
+        <div className="relative max-w-3xl w-full mx-auto rounded-2xl border-2 border-brand-dark bg-brand-secondary/20 px-8 py-5 shadow-brutal flex items-start gap-4">
+          <div className="shrink-0 mt-0.5 size-8 rounded-md border-2 border-brand-dark bg-brand-secondary flex items-center justify-center">
+            <Sparkles className="size-4 text-brand-dark" />
+          </div>
+          <div>
+            <p className="text-xl font-bold text-brand-dark mb-0.5">Not sure which tier fits?</p>
+            <p className="text-md text-brand-gray-500 leading-relaxed">
+              Let's talk — most projects start with a{' '}
+              <span className="font-semibold text-brand-dark underline">free 30-minute scoping call</span>.
+              We'll scope your project and recommend the right fit before any commitment.
+            </p>
+          </div>
+        </div>
+
+        <BrutalButton to="/contact" variant="outline" className="mt-2">
+          Book a free scoping call <ArrowRight className="size-4" />
+        </BrutalButton>
       </div>
     </section>
   );

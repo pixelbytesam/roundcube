@@ -62,8 +62,8 @@ function HeroBanner() {
     <section className="relative bg-brand-dark pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
       <div className="absolute top-20 right-20 size-32 border-2 border-brand-secondary/20 rounded-full" />
       <div className="absolute bottom-10 left-16 size-20 bg-brand-primary/10 rounded-2xl rotate-45" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl animate-fade-up">
+      <div className="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto animate-fade-up">
           <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-brand-secondary text-brand-dark border-2 border-brand-dark rounded-full shadow-brutal-sm mb-6">
             Our Services
           </span>
@@ -71,7 +71,7 @@ function HeroBanner() {
             End-to-end digital{' '}
             <span className="text-brand-primary">services</span> for ambitious teams
           </h1>
-          <p className="mt-5 text-lg text-brand-gray-300 max-w-2xl text-pretty">
+          <p className="mt-5 text-lg text-center mx-auto text-brand-gray-300 max-w-2xl text-pretty">
             From concept to cloud — we cover every layer of the modern tech stack so you can focus on growing your business.
           </p>
         </div>

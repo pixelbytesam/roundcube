@@ -19,8 +19,8 @@ function HeroBanner() {
     <section className="relative bg-brand-dark pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
       <div className="absolute top-24 right-24 size-24 border-2 border-brand-secondary/20 rounded-full" />
       <div className="absolute bottom-16 left-12 size-14 bg-brand-primary/15 rounded-lg rotate-45" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl animate-fade-up">
+      <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto animate-fade-up">
           <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-brand-secondary text-brand-dark border-2 border-brand-dark rounded-full shadow-brutal-sm mb-6">
             Portfolio
           </span>

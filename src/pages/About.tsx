@@ -13,7 +13,7 @@ function HeroBanner() {
       <div className="absolute top-16 left-20 size-28 border-2 border-brand-primary/20 rounded-full" />
       <div className="absolute bottom-12 right-16 size-16 bg-brand-secondary/15 rounded-xl rotate-12" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="max-w-3xl mx-auto text-center animate-fade-up">
           <div className="lg:col-span-7 animate-fade-up">
             <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-brand-secondary text-brand-dark border-2 border-brand-dark rounded-full shadow-brutal-sm mb-6">
               About Us
@@ -26,16 +26,7 @@ function HeroBanner() {
               We're a tight-knit crew of engineers, designers, and strategists who believe software should be built with craft, not just code.
             </p>
           </div>
-          <div className="lg:col-span-5 animate-fade-up stagger-2">
-            <div className="relative">
-              <div className="absolute inset-0 bg-brand-primary/20 rounded-2xl translate-x-3 translate-y-3" />
-              <img
-                src={aboutHero}
-                alt="Abstract teamwork illustration"
-                className="relative w-full rounded-2xl border-2 border-white/20"
-              />
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
