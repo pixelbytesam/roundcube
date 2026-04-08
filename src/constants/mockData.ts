@@ -391,6 +391,17 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'proj-2',
+    title: 'Java Developer Portfolio',
+    description: 'A modern developer portfolio showcasing Java and Spring Boot projects, featuring REST APIs, scalable backend architecture, and interactive UI with smooth animations.',
+    category: 'landing',
+    techStack: ['Java', 'Spring Boot', 'React', 'Tailwind', 'GSAP'],
+    imageUrl: '/project/portfolio.png',
+    year: '2025',
+    link: 'https://java-dev-portfolio.vercel.app/',
+    client: 'Personal Project',
+  },
+  {
+    id: 'proj-3',
     title: 'SolarEcoo',
     description: 'SolarEcoo provides smart solar panel installation solutions, enabling users to reduce electricity costs and embrace sustainable, eco-friendly energy.',
     category: 'web',
@@ -401,7 +412,7 @@ export const PROJECTS: Project[] = [
     client: 'Solar Ecoo',
   },
   {
-    id: 'proj-3',
+    id: 'proj-4',
     title: 'Stackboard',
     description: 'A collaborative project management SaaS with real-time kanban boards, time tracking, and team analytics.',
     category: 'saas',
@@ -411,7 +422,7 @@ export const PROJECTS: Project[] = [
     client: 'Stackboard Labs',
   },
   {
-    id: 'proj-4',
+    id: 'proj-5',
     title: 'GreenRoute',
     description: 'An eco-logistics platform optimizing delivery routes to reduce carbon emissions for last-mile delivery.',
     category: 'web',
@@ -421,7 +432,7 @@ export const PROJECTS: Project[] = [
     client: 'GreenRoute Logistics',
   },
   {
-    id: 'proj-5',
+    id: 'proj-6',
     title: 'MedSync',
     description: 'A healthcare appointment and records management app with telemedicine integration and HIPAA compliance.',
     category: 'mobile',
@@ -431,7 +442,7 @@ export const PROJECTS: Project[] = [
     client: 'MedSync Health',
   },
   {
-    id: 'proj-6',
+    id: 'proj-7',
     title: 'Cloudhive',
     description: 'An analytics SaaS platform providing real-time insights, custom dashboards, and automated reporting.',
     category: 'saas',
@@ -441,7 +452,7 @@ export const PROJECTS: Project[] = [
     client: 'Cloudhive Analytics',
   },
   {
-    id: 'proj-7',
+    id: 'proj-8',
     title: 'NomadStay',
     description: 'A digital nomad accommodation marketplace connecting remote workers with unique co-living spaces.',
     category: 'web',
@@ -451,7 +462,18 @@ export const PROJECTS: Project[] = [
     client: 'NomadStay Inc.',
   },
   {
-    id: 'proj-8',
+    id: 'proj-9',
+    title: 'Designer Portfolio',
+    description: 'A visually rich portfolio showcasing UI/UX design projects, interactive prototypes, and modern layouts with smooth animations and responsive design.',
+    category: 'landing',
+    techStack: ['Figma', 'React', 'Tailwind', 'Framer Motion', 'GSAP'],
+    imageUrl: '/project/designer-portfolio.png',
+    year: '2025',
+    link: 'https://portfolio-landing-zqhv.vercel.app/',
+    client: 'Personal Project',
+  },
+  {
+    id: 'proj-10',
     title: 'LearnForge',
     description: 'An AI-powered e-learning platform with adaptive quizzes, progress tracking, and collaborative study rooms.',
     category: 'saas',

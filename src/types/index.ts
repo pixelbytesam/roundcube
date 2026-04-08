@@ -34,7 +34,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: 'web' | 'mobile' | 'saas';
+  category: 'web' | 'mobile' | 'saas' | 'landing';
   techStack: string[];
   imageUrl: string;
   year: string;
@@ -107,4 +107,4 @@ export interface FAQ {
   answer: string;
 }
 
-export type ProjectCategory = 'all' | 'web' | 'mobile' | 'saas';
+export type ProjectCategory = 'all' | 'web' | 'mobile' | 'saas' | 'landing';

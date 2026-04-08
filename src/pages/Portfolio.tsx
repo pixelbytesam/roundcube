@@ -10,6 +10,7 @@ import type { ProjectCategory } from '@/types';
 const FILTERS: { label: string; value: ProjectCategory }[] = [
   { label: 'All Projects', value: 'all' },
   { label: 'Web', value: 'web' },
+  { label: 'Landing Pages', value: 'landing' },
   { label: 'Mobile', value: 'mobile' },
   { label: 'SaaS', value: 'saas' },
 ];
