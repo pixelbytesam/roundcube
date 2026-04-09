@@ -27,14 +27,14 @@ export interface CaseStudy {
   techUsed: string[];
   outcome: string;
   imageUrl: string;
-  category: 'web' | 'mobile' | 'saas' | 'security' | 'cloud' | 'custom-software' | 'landing-pages';
+  category: 'web' | 'mobile' | 'saas' | 'security' | 'cloud' | 'custom-software' | 'landing-pages' | 'fullstack';
 }
 
 export interface Project {
   id: string;
   title: string;
   description: string;
-  category: 'web' | 'mobile' | 'saas' | 'landing';
+  category: 'web' | 'mobile' | 'saas' | 'landing' | 'fullstack';
   techStack: string[];
   imageUrl: string;
   year: string;
@@ -107,4 +107,4 @@ export interface FAQ {
   answer: string;
 }
 
-export type ProjectCategory = 'all' | 'web' | 'mobile' | 'saas' | 'landing';
+export type ProjectCategory = 'all' | 'web' | 'mobile' | 'saas' | 'landing' | 'fullstack';

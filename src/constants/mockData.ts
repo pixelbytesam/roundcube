@@ -411,8 +411,18 @@ export const PROJECTS: Project[] = [
     year: '2025',
     client: 'Solar Ecoo',
   },
-  {
+    {
     id: 'proj-4',
+    title: 'RankLocal',
+    description: 'A location-based platform that helps users compare nearby shops using real user reviews, ratings, and feedback—making it easier to discover and choose the best local services.',
+    category: 'fullstack',
+    techStack: ['Java', 'Spring Boot', 'React', 'MySQL', 'Google Maps API'],
+    imageUrl: '/project/ranklocal.png',
+    year: '2025',
+    client: 'Personal Project',
+  }, 
+  {
+    id: 'proj-5',
     title: 'Stackboard',
     description: 'A collaborative project management SaaS with real-time kanban boards, time tracking, and team analytics.',
     category: 'saas',
@@ -422,7 +432,7 @@ export const PROJECTS: Project[] = [
     client: 'Stackboard Labs',
   },
   {
-    id: 'proj-5',
+    id: 'proj-6',
     title: 'GreenRoute',
     description: 'An eco-logistics platform optimizing delivery routes to reduce carbon emissions for last-mile delivery.',
     category: 'web',
@@ -432,7 +442,18 @@ export const PROJECTS: Project[] = [
     client: 'GreenRoute Logistics',
   },
   {
-    id: 'proj-6',
+    id: 'proj-7',
+    title: 'Nexora',
+    description: 'An AI-powered automation platform that streamlines workflows using intelligent agents that learn, adapt, and execute tasks—helping teams eliminate repetitive work and focus on high-impact outcomes.',
+    category: 'saas',
+    techStack: ['Java', 'Spring Boot', 'Microservices', 'React', 'Tailwind', 'AI'],
+    imageUrl: '/project/nexora.png',
+    year: '2025',
+    client: 'Personal Project',
+  },
+
+  {
+    id: 'proj-8',
     title: 'MedSync',
     description: 'A healthcare appointment and records management app with telemedicine integration and HIPAA compliance.',
     category: 'mobile',
@@ -442,7 +463,7 @@ export const PROJECTS: Project[] = [
     client: 'MedSync Health',
   },
   {
-    id: 'proj-7',
+    id: 'proj-9',
     title: 'Cloudhive',
     description: 'An analytics SaaS platform providing real-time insights, custom dashboards, and automated reporting.',
     category: 'saas',
@@ -452,7 +473,7 @@ export const PROJECTS: Project[] = [
     client: 'Cloudhive Analytics',
   },
   {
-    id: 'proj-8',
+    id: 'proj-10',
     title: 'NomadStay',
     description: 'A digital nomad accommodation marketplace connecting remote workers with unique co-living spaces.',
     category: 'web',
@@ -462,7 +483,7 @@ export const PROJECTS: Project[] = [
     client: 'NomadStay Inc.',
   },
   {
-    id: 'proj-9',
+    id: 'proj-11',
     title: 'Designer Portfolio',
     description: 'A visually rich portfolio showcasing UI/UX design projects, interactive prototypes, and modern layouts with smooth animations and responsive design.',
     category: 'landing',
@@ -472,18 +493,9 @@ export const PROJECTS: Project[] = [
     link: 'https://portfolio-landing-zqhv.vercel.app/',
     client: 'Personal Project',
   },
+
   {
-    id: 'proj-10',
-    title: 'Nexora',
-    description: 'An AI-powered automation platform that streamlines workflows using intelligent agents that learn, adapt, and execute tasks—helping teams eliminate repetitive work and focus on high-impact outcomes.',
-    category: 'saas',
-    techStack: ['Java', 'Spring Boot', 'Microservices', 'React', 'Tailwind', 'AI'],
-    imageUrl: '/project/nexora.png',
-    year: '2025',
-    client: 'Personal Project',
-  },
-  {
-    id: 'proj-11',
+    id: 'proj-12',
     title: 'LearnForge',
     description: 'An AI-powered e-learning platform with adaptive quizzes, progress tracking, and collaborative study rooms.',
     category: 'saas',
