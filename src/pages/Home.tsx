@@ -24,6 +24,7 @@ import {
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from 'react';
 import HeroHeading from '@/components/HeroHeadingLoop';
+import LoadingFallback from './LoadingFallback';
 
 
 /* ─── 1. HERO ─── */
@@ -378,6 +379,7 @@ export default function Home() {
       <StatsSection />
       <TestimonialsSection />
       <FinalCtaSection />
+      <LoadingFallback/>
     </main>
   );
 }

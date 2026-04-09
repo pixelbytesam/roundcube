@@ -97,7 +97,7 @@ function ContactForm() {
   };
 
   const inputBase =
-    'w-full px-4 py-3 text-[15px] bg-white border-2 border-brand-dark rounded-xl shadow-brutal-sm placeholder:text-brand-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-shadow';
+    'w-full px-4 py-3 text-[15px] bg-white border-2 border-brand-dark rounded-xl shadow-[0px_4px_0px_0px_rgba(0,0,0,1)] placeholder:text-brand-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-shadow';
 
   return (
     <section className="py-20 md:py-28 bg-brand-cream">
@@ -187,7 +187,7 @@ function ContactForm() {
                         {(['yes', 'no'] as const).map((val) => (
                           <label
                             key={val}
-                            className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-2 rounded-xl cursor-pointer transition-all shadow-brutal-sm select-none
+                            className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-2 rounded-xl cursor-pointer transition-all shadow-[0px_4px_0px_0px_rgba(0,0,0,1)] select-none
                               ${form.whatsapp === val
                                 ? 'bg-brand-primary text-white border-brand-dark'
                                 : 'bg-white text-brand-dark border-brand-dark hover:bg-brand-cream'

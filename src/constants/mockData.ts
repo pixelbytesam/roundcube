@@ -474,6 +474,16 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'proj-10',
+    title: 'Nexora',
+    description: 'An AI-powered automation platform that streamlines workflows using intelligent agents that learn, adapt, and execute tasks—helping teams eliminate repetitive work and focus on high-impact outcomes.',
+    category: 'saas',
+    techStack: ['Java', 'Spring Boot', 'Microservices', 'React', 'Tailwind', 'AI'],
+    imageUrl: '/project/nexora.png',
+    year: '2025',
+    client: 'Personal Project',
+  },
+  {
+    id: 'proj-11',
     title: 'LearnForge',
     description: 'An AI-powered e-learning platform with adaptive quizzes, progress tracking, and collaborative study rooms.',
     category: 'saas',
