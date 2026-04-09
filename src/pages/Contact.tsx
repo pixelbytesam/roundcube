@@ -303,7 +303,7 @@ function ContactForm() {
                 <div className="space-y-5">
                   {[
                     { icon: Mail, label: 'Email', value: 'hello@flatorbit.com' },
-                    { icon: Phone, label: 'Phone', value: '+91 89653 28689' },
+                    { icon: Phone, label: 'Phone', value: '+91 80106 57382' },
                     { icon: MapPin, label: 'Office', value: 'Pune, Maharashtra, India' },
                     { icon: Clock, label: 'Working Hours', value: 'Mon – Sat, 10am – 7pm IST' },
                   ].map(({ icon: Icon, label, value }) => (

@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   tagline: 'We Build Digital Products That Matter',
   description: 'Premium IT services agency specializing in web, mobile, and custom software development with bold design and cutting-edge technology.',
   email: 'support@flatorbit.com',
-  phone: '+91-8965328689',
+  phone: '+91 80106 57382',
   address: '42 Pune, Maharashtra, India',
   social: {
     github: {

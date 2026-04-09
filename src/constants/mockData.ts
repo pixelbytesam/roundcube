@@ -419,6 +419,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Java', 'Spring Boot', 'React', 'MySQL', 'Google Maps API'],
     imageUrl: '/project/ranklocal.png',
     year: '2025',
+    link: 'https://rankview.vercel.app/',
     client: 'Personal Project',
   }, 
   {
@@ -449,6 +450,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Java', 'Spring Boot', 'Microservices', 'React', 'Tailwind', 'AI'],
     imageUrl: '/project/nexora.png',
     year: '2025',
+    link: 'https://nexora-rouge-mu.vercel.app/',
     client: 'Personal Project',
   },
 
