@@ -379,7 +379,7 @@ export default function Home() {
       <StatsSection />
       <TestimonialsSection />
       <FinalCtaSection />
-      <LoadingFallback/>
+      {/* <LoadingFallback /> */}
     </main>
   );
 }
