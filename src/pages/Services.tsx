@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Globe2,
   Bug,
+  LayoutTemplate,
   ArrowRight,
   CheckCircle,
   Clock,
@@ -21,6 +22,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { SERVICES } from '@/constants/mockData';
 import { SERVICE_META } from '@/constants/servicesMeta';
 import type { Service } from '@/types';
+import { SERVICE_ID_TO_SLUG } from '@/constants/serviceSlugs';
 
 import serviceWebDev from '@/assets/service-web-dev.png';
 import serviceMobileDev from '@/assets/service-mobile-dev.png';
@@ -31,6 +33,7 @@ import serviceBackend from '@/assets/service-backend.png';
 import serviceSecurity from '@/assets/service-security.png';
 import serviceHosting from '@/assets/service-hosting.png';
 import serviceTesting from '@/assets/service-testing.png';
+import serviceLandingPages from '@/assets/service-landing-pages.png';
 
 const iconMap: Record<string, React.ElementType> = {
   Globe,
@@ -42,10 +45,12 @@ const iconMap: Record<string, React.ElementType> = {
   ShieldCheck,
   Globe2,
   Bug,
+  LayoutTemplate,
 };
 
 const illustrationMap: Record<string, string> = {
   'service-web-dev': serviceWebDev,
+  'service-landing-pages': serviceLandingPages,
   'service-mobile-dev': serviceMobileDev,
   'service-custom-software': serviceCustomSoftware,
   'service-uiux-design': serviceUiuxDesign,
@@ -62,16 +67,16 @@ function HeroBanner() {
     <section className="relative bg-brand-dark pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
       <div className="absolute top-20 right-20 size-32 border-2 border-brand-secondary/20 rounded-full" />
       <div className="absolute bottom-10 left-16 size-20 bg-brand-primary/10 rounded-2xl rotate-45" />
-      <div className="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto animate-fade-up">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl m-auto text-center animate-fade-up">
           <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-brand-secondary text-brand-dark border-2 border-brand-dark rounded-full shadow-brutal-sm mb-6">
             Our Services
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance">
-            End-to-end digital{' '}
-            <span className="text-brand-primary">services</span> for ambitious teams
+            End-to-end {' '}
+            <span className="text-brand-primary block">digital services</span> for ambitious teams
           </h1>
-          <p className="mt-5 text-lg text-center mx-auto text-brand-gray-300 max-w-2xl text-pretty">
+          <p className="mt-5 text-lg text-brand-gray-300 max-w-2xl text-pretty">
             From concept to cloud — we cover every layer of the modern tech stack so you can focus on growing your business.
           </p>
         </div>
@@ -130,7 +135,7 @@ function ZigzagServiceBlock({
 
       <div>
         <Link
-          to={`/services/${service.id}`}
+          to={`/${SERVICE_ID_TO_SLUG[service.id] || service.id}`}
           className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-brand-dark border-2 border-brand-dark rounded-xl transition-all duration-200 hover:bg-brand-dark hover:text-white hover:shadow-brutal active:translate-x-[2px] active:translate-y-[2px]"
         >
           View Details <ArrowRight className="size-4" />
@@ -263,10 +268,9 @@ function ComparisonTable() {
                   return (
                     <Link
                       key={service.id}
-                      to={`/services/${service.id}`}
-                      className={`grid grid-cols-4 items-center transition-colors duration-150 hover:bg-brand-primary/5 group ${
-                        i < SERVICES.length - 1 ? 'border-b border-brand-dark/10' : ''
-                      }`}
+                      to={`/${SERVICE_ID_TO_SLUG[service.id] || service.id}`}
+                      className={`grid grid-cols-4 items-center transition-colors duration-150 hover:bg-brand-primary/5 group ${i < SERVICES.length - 1 ? 'border-b border-brand-dark/10' : ''
+                        }`}
                     >
                       <div className="px-6 py-4 flex items-center gap-3">
                         <div className="size-9 flex items-center justify-center bg-brand-primary/10 border border-brand-primary/20 rounded-lg shrink-0">

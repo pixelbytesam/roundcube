@@ -54,7 +54,7 @@ export default function Navbar() {
           />
           {/* </div> */}
           <span
-            className={`text-2xl tracking-wide transition-colors mb-2 font-blanka ${scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
+            className={`text-3xl tracking-wide transition-colors mt-1 bebas-neue-regular ${scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
               }`}
             style={{ letterSpacing: "2px" }}
 

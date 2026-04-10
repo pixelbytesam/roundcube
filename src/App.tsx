@@ -5,12 +5,11 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import PageTransition from '@/components/layout/PageTransition';
 import ScrollProgressBar from '@/components/features/ScrollProgressBar';
-import { motion } from 'framer-motion';
-import LoadingFallback from './pages/LoadingFallback';
 
 const Home = lazy(() => import('@/pages/Home'));
 const Services = lazy(() => import('@/pages/Services'));
 const ServiceDetail = lazy(() => import('@/pages/ServiceDetail'));
+const ServiceLandingPage = lazy(() => import('@/pages/ServiceLandingPage'));
 const About = lazy(() => import('@/pages/About'));
 const Portfolio = lazy(() => import('@/pages/Portfolio'));
 const Pricing = lazy(() => import('@/pages/Pricing'));
@@ -20,12 +19,22 @@ const TermsConditions = lazy(() => import('@/pages/TermsConditions'));
 const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
-
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-brand-cream">
+      <div className="flex flex-col items-center gap-4">
+        <div className="size-12 bg-brand-primary border-2 border-brand-dark rounded-xl shadow-brutal animate-pulse" />
+        <p className="text-sm font-medium text-brand-gray-400">Loading...</p>
+      </div>
+    </div>
+  );
+}
 
 export default function App() {
   return (
     <BrowserRouter>
-
+      <div className="flex flex-col min-h-screen">
+        <ScrollProgressBar />
         <Navbar />
         <div className="flex-1">
           <Suspense fallback={<LoadingFallback />}>
@@ -34,6 +43,19 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/:serviceId" element={<ServiceDetail />} />
+
+                {/* Service landing pages — SEO-friendly standalone routes */}
+                <Route path="/web-development" element={<ServiceLandingPage />} />
+                <Route path="/mobile-app-development" element={<ServiceLandingPage />} />
+                <Route path="/custom-software-development" element={<ServiceLandingPage />} />
+                <Route path="/ui-ux-design" element={<ServiceLandingPage />} />
+                <Route path="/cloud-solutions" element={<ServiceLandingPage />} />
+                <Route path="/backend-development" element={<ServiceLandingPage />} />
+                <Route path="/security-enhancement" element={<ServiceLandingPage />} />
+                <Route path="/domain-hosting-services" element={<ServiceLandingPage />} />
+                <Route path="/landing-pages" element={<ServiceLandingPage />} />
+                <Route path="/software-testing" element={<ServiceLandingPage />} />
+
                 <Route path="/about" element={<About />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/pricing" element={<Pricing />} />
@@ -45,7 +67,7 @@ export default function App() {
               </Routes>
             </PageTransition>
           </Suspense>
-  
+        </div>
         <Footer />
       </div>
       <Toaster />

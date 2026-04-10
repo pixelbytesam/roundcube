@@ -65,13 +65,12 @@ const processIconMap: Record<string, React.ElementType> = {
 };
 
 const illustrationMap: Record<string, string> = {
-  'web-development': serviceWebDev,
-  'mobile-app-development': serviceMobileDev,
-  'landing-pages': serviceWebDev,
-  'custom-software-development': serviceCustomSoftware,
+  'web-dev': serviceWebDev,
+  'mobile-dev': serviceMobileDev,
+  'custom-software': serviceCustomSoftware,
   'ui-ux-design': serviceUiuxDesign,
   'cloud-solutions': serviceCloud,
-  'backend-development': serviceBackend,
+  'backend-dev': serviceBackend,
   'security': serviceSecurity,
   'domain-hosting': serviceHosting,
   'testing': serviceTesting,
@@ -101,7 +100,7 @@ function ServiceHero({ service }: { service: Service }) {
               <div className="size-16 flex items-center justify-center bg-brand-primary/15 border-2 border-brand-primary/30 rounded-2xl shadow-[3px_3px_0px_0px_rgba(217,119,87,0.3)]">
                 <Icon className="size-7 text-brand-primary" />
               </div>
-              <span className="text-8xl md:text-9xl font-bold text-white/[0.06] leading-none select-none">
+              <span className="text-8xl md:text-9xl jersey-20-regular font-bold text-white/70 leading-none select-none">
                 {service.number}
               </span>
             </div>

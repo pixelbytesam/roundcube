@@ -25,6 +25,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from 'react';
 import HeroHeading from '@/components/HeroHeadingLoop';
 import LoadingFallback from './LoadingFallback';
+import FlatOrbitHero from '@/components/features/FlatOrbitHero';
 
 
 /* ─── 1. HERO ─── */
@@ -64,7 +65,7 @@ function HeroSection() {
 
 
   return (
-    <section className="relative overflow-hidden bg-brand-dark pt-28 pb-20 md:pt-36 md:pb-28" ref={heroRef}
+    <section className="relative overflow-hidden bg-brand-dark  pb-20 md:pt-36 md:pb-28" ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}>
       <div className="absolute top-24 left-8 size-20 border-2 border-brand-secondary/20 rounded-full animate-[pulse_4s_ease-in-out_infinite]" />
@@ -119,10 +120,7 @@ function HeroSection() {
               }}
               className="w-full flex justify-center perspective-[1200px]"
             >
-              <img
-                src="/home/dev5.svg"
-                alt="Build & Launch"
-                className="w-[600px] animate-float md:w-[800px] lg:w-[900px] xl:w-[1000px]" />
+             <FlatOrbitHero/> 
             </motion.div>
           </div>
         </div>
@@ -211,7 +209,7 @@ function ProcessSection() {
 }
 
 /* ─── 5. FEATURES ─── */
-function FeaturesSection() {
+export function FeaturesSection() {
   const { ref, isVisible } = useScrollAnimation();
   return (
     <section className="py-20 md:py-28 bg-brand-cream" ref={ref}>

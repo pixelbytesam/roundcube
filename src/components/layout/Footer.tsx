@@ -14,7 +14,7 @@ export default function Footer() {
               {/* <div className="size-9 bg-brand-primary border-2 border-white rounded-lg flex items-center justify-center"> */}
               <img src="/logo-light.png" alt="" className='w-10' />
               {/* </div> */}
-              <span className="text-xl font-blanka" style={{ letterSpacing: "2px" }}>{SITE_CONFIG.name}</span>
+              <span className="text-3xl bebas-neue-regular" style={{ letterSpacing: "2px" }}>{SITE_CONFIG.name}</span>
             </div>
             <p className="text-brand-gray-400 text-[15px] leading-relaxed max-w-sm" >
               {SITE_CONFIG.description}
@@ -63,7 +63,7 @@ export default function Footer() {
               {SERVICES.map((s) => (
                 <li key={s.id}>
                   <Link
-                    to={`/services/${s.id}`}
+                    to={`/${s.id}`}
                     className="text-brand-gray-400 hover:text-white transition-colors text-[15px]"
                   >
                     {s.title}

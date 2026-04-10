@@ -13,29 +13,28 @@ export default defineConfig({
     sitemap({
       hostname: 'https://www.flatorbit.com',
       dynamicRoutes: [
-        // Main pages
         '/',
-        '/about',
         '/services',
+        '/about',
         '/portfolio',
         '/pricing',
         '/contact',
+
+        '/web-development',
+        '/mobile-app-development',
+        '/custom-software-development',
+        '/ui-ux-design',
+        '/cloud-solutions',
+        '/backend-development',
+        '/security-enhancement',
+        '/domain-hosting-services',
+        '/landing-pages',
+        '/software-testing',
+
         '/privacy',
         '/terms',
         '/refund',
-
-        // Service detail pages
-        '/services/web-development',
-        '/services/mobile-app-development',
-        '/services/landing-pages',
-        '/services/custom-software-development',
-        '/services/ui-ux-design',
-        '/services/cloud-solutions',
-        '/services/backend-development',
-        '/services/security',
-        '/services/domain-hosting',
-        '/services/testing',
-      ]
+      ],
     })
   ],
   resolve: {

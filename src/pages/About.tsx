@@ -6,6 +6,7 @@ import StatCounter from '@/components/features/StatCounter';
 import TeamCard from '@/components/features/TeamCard';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { STATS, TEAM_MEMBERS } from '@/constants/mockData';
+import { FeaturesSection } from './Home';
 
 function HeroBanner() {
   return (
@@ -183,6 +184,9 @@ function TeamSection() {
     </section>
   );
 }
+
+ //is defined in Home.tsx and reused here to avoid code duplication, since the content is the same. We can easily customize it with props if we want to show different features on the About page in the future.
+
 function CtaSection() {
   return (
     <section className="py-20 bg-white">
@@ -214,6 +218,7 @@ export default function About() {
       <MissionVision />
       <StatsBar />
       <TeamSection />
+      <FeaturesSection />
       <CtaSection />
     </main>
   );
