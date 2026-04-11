@@ -120,7 +120,7 @@ function HeroSection() {
               }}
               className="w-full flex justify-center perspective-[1200px]"
             >
-             <FlatOrbitHero/> 
+              <FlatOrbitHero />
             </motion.div>
           </div>
         </div>
@@ -227,6 +227,113 @@ export function FeaturesSection() {
             ))}
           </div>
         )}
+      </div>
+    </section>
+  );
+}
+
+function StorySectionV2() {
+  return (
+    <section className="py-20 md:py-28 bg-brand-cream">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* TOP CENTER CONTENT */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-brand-secondary text-brand-dark border-2 border-brand-dark rounded-full shadow-brutal-sm mb-6">
+            Our Story
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight">
+            Built to break boring software
+          </h2>
+
+          <p className="mt-5 text-lg text-brand-gray-500 leading-relaxed">
+            Flatorbit was created with one goal — to eliminate slow, bloated,
+            and ineffective digital products. We build fast, think deeply,
+            and focus only on what drives results.
+          </p>
+        </div>
+
+        {/* ASYMMETRIC GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* BIG CARD */}
+          <div className="bg-brand-dark text-white border-2 border-brand-dark rounded-3xl p-10 shadow-brutal flex flex-col justify-between">
+            <div>
+              <p className="text-sm text-brand-gray-400 mb-3">
+                Our Core Belief
+              </p>
+              <h3 className="text-3xl font-bold leading-snug">
+                Design is not decoration.
+                <br /> It’s conversion.
+              </h3>
+            </div>
+
+            <p className="text-brand-gray-300 mt-6 text-sm">
+              Every UI we craft is engineered to guide users, reduce friction,
+              and drive measurable outcomes.
+            </p>
+          </div>
+
+          {/* STACKED SMALL CARDS */}
+          <div className="grid gap-6">
+
+            <div className="bg-white border-2 border-brand-dark rounded-2xl p-6 shadow-brutal">
+              <p className="text-sm text-brand-gray-400 mb-2">
+                Speed matters
+              </p>
+              <h3 className="text-4xl font-bold text-brand-dark">3x</h3>
+              <p className="text-sm text-brand-gray-500 mt-2">
+                Faster delivery than traditional agencies
+              </p>
+            </div>
+
+            <div className="bg-white border-2 border-brand-dark rounded-2xl p-6 shadow-brutal">
+              <p className="text-sm text-brand-gray-400 mb-2">
+                Approach
+              </p>
+              <h3 className="text-4xl font-bold text-brand-dark">Lean</h3>
+              <p className="text-sm text-brand-gray-500 mt-2">
+                focused on impact, not noise
+              </p>
+            </div>
+
+          </div>
+
+          {/* WIDE CARD */}
+          {/* <div className="md:col-span-2 bg-white border-2 border-brand-dark rounded-2xl p-8 shadow-brutal flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div>
+              <p className="text-sm text-brand-gray-400 mb-2">
+                Our journey so far
+              </p>
+              <h3 className="text-3xl font-bold text-brand-dark">
+                10+ Products shipped
+              </h3>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-3">
+                {[1,2,3,4].map((i)=>(
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"/>
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-brand-dark">
+                Trusted partners
+              </span>
+            </div>
+
+          </div> */}
+
+        </div>
+
+        {/* BOTTOM STATEMENT */}
+        <div className="mt-16 bg-brand-primary text-white border-2 border-brand-dark rounded-3xl p-10 text-center shadow-brutal">
+          <h3 className="text-2xl md:text-3xl font-bold">
+            We don’t build features. We build outcomes.
+          </h3>
+        </div>
+
       </div>
     </section>
   );
@@ -368,6 +475,7 @@ export default function Home() {
       <HeroSection />
       <AboutStatsSection />
       <ServicesSection />
+      <StorySectionV2 />
       <ProcessSection />
       <FeaturesSection />
       <CtaMidSection />

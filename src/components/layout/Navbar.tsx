@@ -3,12 +3,24 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { NAV_LINKS, SITE_CONFIG } from '@/constants/config';
 import ScrollProgressBar from '../features/ScrollProgressBar';
-import { px } from 'framer-motion';
+
 
 export default function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 550);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -40,7 +52,7 @@ export default function Navbar() {
         /* ^ Notice we keep bg-white as default for mobile, only lg: goes transparent */
         }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[72px]">
+      <nav className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between  h-16 md:h-[72px]`}>
         <Link to="/" className="flex items-center justify-center gap-2.5">
           {/* <div className="size-9 bg-brand-primary border-2 border-brand-dark rounded-lg shadow-brutal-sm flex items-center justify-center"> */}
           <img
@@ -54,7 +66,7 @@ export default function Navbar() {
           />
           {/* </div> */}
           <span
-            className={`text-3xl tracking-wide transition-colors mt-1 bebas-neue-regular ${scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
+            className={`text-3xl ${isMobile ? 'hidden' : 'block'} tracking-wide transition-colors mt-1 bebas-neue-regular ${scrolled || mobileOpen ? 'text-brand-dark' : 'text-brand-dark lg:text-white'
               }`}
             style={{ letterSpacing: "2px" }}
 

@@ -749,14 +749,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Ranjit Dabade',
     role: 'CEO',
     avatarUrl: '/about/ranjit.png',
-    bio: '15 years shipping digital products. Previously engineering lead at Stripe.',
+    bio: '3+ years shipping digital products. Previously engineering lead at Stripe.',
   },
   {
     id: 'tm-2',
     name: 'Vinayak Jadhav',
     role: 'CTO',
     avatarUrl: '/about/vinayak.png',
-    bio: 'Full-stack architect with a passion for performant, accessible code.',
+    bio: 'Full-stack developer with a passion for performant, accessible code.',
   },
 
 ];
