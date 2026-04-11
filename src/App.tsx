@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import PageTransition from '@/components/layout/PageTransition';
 import ScrollProgressBar from '@/components/features/ScrollProgressBar';
+import LoadingFallback from './pages/LoadingFallback';
 
 const Home = lazy(() => import('@/pages/Home'));
 const Services = lazy(() => import('@/pages/Services'));
@@ -19,16 +20,7 @@ const TermsConditions = lazy(() => import('@/pages/TermsConditions'));
 const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
-function LoadingFallback() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-cream">
-      <div className="flex flex-col items-center gap-4">
-        <div className="size-12 bg-brand-primary border-2 border-brand-dark rounded-xl shadow-brutal animate-pulse" />
-        <p className="text-sm font-medium text-brand-gray-400">Loading...</p>
-      </div>
-    </div>
-  );
-}
+
 
 export default function App() {
   return (
